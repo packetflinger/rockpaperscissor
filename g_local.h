@@ -66,9 +66,9 @@
 /* MIKE */
 
 extern char *rps_statusbar;
-int RockScore;
-int PaperScore;
-int ScissorsScore;
+extern int RockScore;
+extern int PaperScore;
+extern int ScissorsScore;
 
 typedef enum
 {

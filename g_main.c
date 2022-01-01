@@ -62,7 +62,10 @@ cvar_t	*flood_waitdelay;
 
 cvar_t	*sv_maplist;
 
-char *rps_statusbar;
+//char *rps_statusbar;
+int RockScore;
+int PaperScore;
+int ScissorsScore;
 
 void SpawnEntities (char *mapname, char *entities, char *spawnpoint);
 void ClientThink (edict_t *ent, usercmd_t *cmd);
