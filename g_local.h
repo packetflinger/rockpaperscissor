@@ -65,7 +65,7 @@
 
 /* MIKE */
 
-char *rps_statusbar;
+extern char *rps_statusbar;
 int RockScore;
 int PaperScore;
 int ScissorsScore;
