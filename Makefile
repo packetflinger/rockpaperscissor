@@ -34,6 +34,7 @@ HEADERS := \
 	m_player.h \
 	q_devels.h \
 	q_shared.h \
+	sl_packet.h \
 	stdlog.h
 
 OBJS := \
@@ -61,7 +62,9 @@ OBJS := \
 	p_weapon.o \
 	q_devels.o \
 	q_shared.o \
-	rps.o
+	rps.o \
+	sl_packet.o \
+	stdlog.o
 
 TARGET ?= game$(CPU)-rockpaperscissor-r$(VER).so	
 

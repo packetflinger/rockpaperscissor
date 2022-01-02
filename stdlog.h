@@ -4,7 +4,12 @@
 **
 **	Public header file.
 **
-**	$Id: stdlog.h 1.8 1998/08/29 13:52:24 mdavies Exp mdavies $
+**	$Id: stdlog.h 1.11 1999/04/25 17:52:27 mdavies Exp $
+**
+**  Copyright (c) 1998-1999 Mark Davies.
+**  Distributed under the "Artistic License".
+**  Please read the file artistic.txt for complete licensing and
+**  redistribution information.
 **
 ******************************************************************************/
 
@@ -12,11 +17,7 @@
 #ifndef __STDLOG_H__
 #define __STDLOG_H__
 
-// #include "g_local.h"
-
-
-#define __STDLOG_ID__ "$Id: stdlog.h 1.8 1998/08/29 13:52:24 mdavies Exp mdavies $"
-
+#define __STDLOG_ID__ "$Id: stdlog.h 1.11 1999/04/25 17:52:27 mdavies Exp $"
 
 
 /******************************************************************************
@@ -24,33 +25,18 @@
 **	DEFINES
 **
 ******************************************************************************/
+#define SL_LOG_STYLE_1_2      0
+#define SL_LOG_STYLE_1_2a     1
 
-#define SL_ERROR_NONE        0
-#define SL_ERROR_NOMEM      -1
-#define SL_ERROR_BADPACKET  -2
+#define SL_LOG_STYLE_LATEST   SL_LOG_STYLE_1_2a
+#define SL_LOG_STYLE_DEFAULT  SL_LOG_STYLE_1_2
 
-#define SL_FLAGS_NONE        0
-#define SL_FLAGS_COMPRESS    (1<<0)
 
 /******************************************************************************
 **
 **	Typedefs
 **
 ******************************************************************************/
-
-typedef unsigned long DWORD;
-typedef unsigned char BYTE;
-   
-typedef struct
-{
-    DWORD   nPacket;
-    DWORD   nClients;
-    char   *pServerInfo;
-    char   *pLogString;
-    char  **ppClientInfo;               /* NULL terminated Array of strings pointers */
-} PACKET_STRUCT;
-
-typedef unsigned char   PACKET_BYTES;
 
 /******************************************************************************
 **
@@ -119,15 +105,6 @@ extern void sl_LogPlayerRename( game_import_t  *gi,
                                 char           *pNewPlayerName,
                                 float           timeInSeconds);
 
-
-
-
-extern int  sl_DeconstructPacketBytes( PACKET_STRUCT **ppPacketStruct,
-                                       PACKET_BYTES   *pPacketBytes,
-                                       unsigned long   ulPacketBytesLength,
-                                       unsigned long   ulFlags );
-
-extern void sl_DestroyPacketBytes( PACKET_STRUCT *pPacketStruct );
 
 
 
