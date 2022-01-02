@@ -26,6 +26,8 @@ set hostname       "RPS Biatch!"
 set maxclients     "20"
 set rcon_password  "bonergarage"
 set sv_maplist     "q2dm1 tltf q2rdm2 q2dm3 q2dm8 backup campcity children"
+set fraglimit      "30"  // frags, not score points
+set timelimit      "15"  // minutes
 
 // weapon stay, instant items, same level, spawn farthest, quad drop
 set dmflags        "16948" 
